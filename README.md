@@ -2,7 +2,7 @@
 Red Neuronal Perceptron en JAVA 
 
 Perceptron Individual de una sola capa
-Este es un pequeño proyecto realido en JAVA desarrollado para soportar multiples entradas esta dividido en dos componentes:
+Este es un pequeño proyecto realizado en JAVA desarrollado para soportar multiples entradas esta dividido en dos componentes:
 
   # Neuron
     La cual es el objeto que representa a la neurona y todo sus componentes:
