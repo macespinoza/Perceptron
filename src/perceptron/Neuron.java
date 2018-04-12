@@ -64,7 +64,7 @@ public class Neuron {
 
     @Override
     public String toString() {
-        return "Neuron{" + "entradas=" + entradas.length + ", x=" + x + ", w=" + w + ", polatizacion=" + polarizacion + '}';
+        return "Neuron{" + "entradas=" + entradas.length + ", x=" + x + ", w=" + w + ", polatizacion=" + polarizacion + '}'; 
     }
     
     
