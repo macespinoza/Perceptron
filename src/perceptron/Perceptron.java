@@ -13,9 +13,14 @@ public class Perceptron {
 
     
     public static void main(String[] args) {
-
+        //Ejemplo display
+        System.out.println("Ejercicio Display");
         neuronaDisplay();
+        //Ejemplo AND
+        System.out.println("Ejercicio AND");
         neuronaAndOr(1);
+        System.out.println("Ejercicio OR");
+        //Ejemplo OR
         neuronaAndOr(2);
     }
     public static void neuronaAndOr(int tipo){
@@ -31,8 +36,8 @@ public class Perceptron {
         //valores esperados AND
             List<Double> valoresEsperadoAND = new ArrayList<>();
             valoresEsperadoAND.add(0.0);
-            valoresEsperadoAND.add(1.0);
-            valoresEsperadoAND.add(1.0);
+            valoresEsperadoAND.add(0.0);
+            valoresEsperadoAND.add(0.0);
             valoresEsperadoAND.add(1.0); 
             
          List<Double> valoresTomados = new ArrayList<>(); 
@@ -53,10 +58,11 @@ public class Perceptron {
         //Creamos la neurona tamaño 2
             Neuron neurona2 = new Neuron(2);
         //Entrenamos la neurona
-            neurona2 = trainer.train(neurona2, entrada, valoresTomados);
-        //Cargamos los valores de prueba
+            neurona2 = trainer.train(neurona2, entrada, valoresTomados,100);
+        //Cargamos los valores de prueba (0 1) Respuesta esperada para AND 0
+        //Cargamos los valores de prueba (0 1) Respuesta esperada para OR 1
             List<Double> valoresX1 = new ArrayList<>();
-            valoresX1.add(1.0);
+            valoresX1.add(0.0);
             valoresX1.add(1.0);
             neurona2.setX(valoresX1);
         //Mostramos la salida
@@ -94,6 +100,7 @@ public class Perceptron {
              e  |_|  f
                  g
         */
+        //Valor 1 esperado para los numeros impares 1,3,5,7,9
         List<Double> valoresEsperadoDP = new ArrayList<>();
         valoresEsperadoDP.add(0.0);
         valoresEsperadoDP.add(1.0);
@@ -184,10 +191,10 @@ public class Perceptron {
         //Creamos la neurona tamaño 2
             Neuron neurona3 = new Neuron(7);
         //Entrenamos la neurona
-            neurona3 = trainer2.train(neurona3, entradaa, valoresEsperadoDP);
-        //Cargamos los valores de prueba
+            neurona3 = trainer2.train(neurona3, entradaa, valoresEsperadoDP,100);
+        //Cargamos los valores de prueba 3 : Salida esperada 0 
             List<Double> valoresX2 = new ArrayList<>();
-                    valoresX2.add(1.0);
+                    valoresX2.add(0.0);
             valoresX2.add(1.0); valoresX2.add(1.0);
                     valoresX2.add(1.0);
             valoresX2.add(0.0); valoresX2.add(1.0);
