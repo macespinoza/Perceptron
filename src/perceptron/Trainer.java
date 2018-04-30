@@ -15,6 +15,7 @@ public class Trainer {
 
     public Neuron train(Neuron neurona, List<List<Double>> entrada, List<Double> valorEsperado, int limiteConvergencia){
         double error=0;
+
         List<Double> w = new ArrayList<>();
         //Generamos el valor aleatorio para la polarizacion neuronal
         double polarizacion = -1+(Math.random()*(2));
@@ -33,6 +34,7 @@ public class Trainer {
                 neurona.setW(actualizarPesos(entrada.get(j),neurona.getW(),error));
                 neurona.setPolarizacion(neurona.getPolarizacion()+error);
                 validacionEstabilizacionRed=validacionEstabilizacionRed+(int)Math.abs(error);
+
             }
             contadorEstabilizacionRed++;
             if(validacionEstabilizacionRed==0){

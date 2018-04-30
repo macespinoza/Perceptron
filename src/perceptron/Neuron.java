@@ -22,6 +22,7 @@ public class Neuron {
             return this.entradas.length;
     }
     public int sinapsis(){
+
         if(this.entradas.length == this.x.size() && this.x.size() == this.w.size()){
             return funcionActivacion(pNeto()+this.polarizacion);
         }else{

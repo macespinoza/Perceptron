@@ -14,14 +14,14 @@ public class Perceptron {
     
     public static void main(String[] args) {
         //Ejemplo display
-        System.out.println("Ejercicio Display");
-        neuronaDisplay();
+        //System.out.println("Ejercicio Display");
+        //neuronaDisplay();
         //Ejemplo AND
         System.out.println("Ejercicio AND");
         neuronaAndOr(1);
-        System.out.println("Ejercicio OR");
+        //System.out.println("Ejercicio OR");
         //Ejemplo OR
-        neuronaAndOr(2);
+        //neuronaAndOr(2);
     }
     public static void neuronaAndOr(int tipo){
         /*
